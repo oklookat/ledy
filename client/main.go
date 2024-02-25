@@ -37,7 +37,7 @@ func (c *Client) Connect() error {
 		return errors.New("server not found")
 	}
 
-	connURL := url.URL{Scheme: "ws", Host: fmt.Sprintf("%s:%d", data.IP, data.Port), Path: "/"}
+	connURL := url.URL{Scheme: "ws", Host: fmt.Sprintf("%s:%d", data.IP, data.Port), Path: "/ws"}
 	conn, _, err := websocket.DefaultDialer.Dial(connURL.String(), nil)
 	if err != nil {
 		return err

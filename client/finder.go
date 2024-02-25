@@ -10,7 +10,7 @@ import (
 
 const (
 	//_service  = "_ledy._tcp"
-	_hostname = "ledy-server"
+	_hostname = "ledy"
 	_domain   = ".local"
 )
 
@@ -37,6 +37,6 @@ func findService(ctx context.Context) (*finderResult, error) {
 	_, src, err := server.Query(ctx, _hostname+_domain)
 	return &finderResult{
 		IP:   net.ParseIP(src.String()),
-		Port: 81,
+		Port: 80,
 	}, err
 }

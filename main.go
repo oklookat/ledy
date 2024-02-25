@@ -13,8 +13,6 @@ func main() {
 	cl := client.New()
 	chk(cl.Connect())
 	println("Connected.")
-	cl.SetColorCorrection(client.ColorCorrectionTypicalLEDStrip)
-	cl.SetColorTemperature(client.ColorTemperatureCoolWhiteFluorescent)
 
 	leds := effect.NewLEDS()
 	var ledSpec *effect.Spectrum
